@@ -1,0 +1,21 @@
+include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int N, X, P, i;
+    scanf("%d", &N);
+    int arr[101];
+    for(i=0; i<N; i++)
+        scanf("%d", &arr[i]);
+    scanf("%d", &X);
+    scanf("%d", &P);
+    for(i=N; i>P; i--)
+        arr[i]=arr[i-1];
+    arr[P]=X;
+    for(i=0; i<=N; i++)
+        printf("%d ", arr[i]);
+    return 0;
+}
